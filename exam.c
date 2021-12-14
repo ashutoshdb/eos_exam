@@ -23,7 +23,7 @@ char d[1] = "c";
 int main()
 {
     FILE *fd;
-    fd = fopen("./usr/share/dictionary.txt", "r"); 
+    fd = fopen("dictionary.txt", "r"); 
     if(!fd){
         perror("Error \n:");
         exit(EXIT_FAILURE);
