@@ -19,6 +19,7 @@
 char ch[10];
 int smd;
 char *data;
+char d[1] = "c";
 int main()
 {
     FILE *fd;
@@ -30,7 +31,7 @@ int main()
     ch[10] = gets(fd);
     while (!EOF)
     {
-       if(strstr(ch,"m"))
+       if(strstr(ch,d))
        break;
        
     }    
