@@ -11,6 +11,7 @@ char *data;
 int main(int argc, char const *argv[])
 {
     int smd;
+    char *data;
 
     smd = shm_open("/cdacshm", O_RDWR |O_CREAT,S_IRUSR |S_IWUSR); 
     ftruncate(smd,10*sizeof(char));

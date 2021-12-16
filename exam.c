@@ -38,9 +38,10 @@ int main()
     
         
     smd = shm_open("/cdacshm", O_RDWR |O_CREAT,S_IRUSR |S_IWUSR); 
-    ftruncate(smd,10 *sizeof(char));
+    ftruncate(smd,10);
     data = (char *)mmap(NULL, sizeof(char), PROT_READ | PROT_WRITE, MAP_SHARED, smd,0); 
-    data = ch;
+    *data = ch[0];
+    printf("sucess");
 
     return 0;
 }
